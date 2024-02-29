@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Employee Schedule</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    width: 80%;
+    margin: auto;
+  }
+  .profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile-card img {
+    width: 150px; /* Adjust as needed */
+    border-radius: 50%;
+  }
+  .profile-card h2 {
+    margin: 10px 0;
+  }
+  .profile-card p {
+    margin: 5px 0;
+  }
+  .schedule {
+    border: 1px solid #ccc;
+  }
+  .schedule-header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    display: block;
+    isplay: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  schedule-header button {
+background: none;
+border: none;
+color: white;
+padding: 5px 10px;
+cursor: pointer;
+}
+.time-slot {
+display: flex;
+padding: 10px 20px;
+justify-content: space-between;
+border-bottom: 1px solid #ccc;
+}
+.time-slot:nth-child(even) {
+background-color: #e0e0e0;
+}
+.time-slot.unavailable {
+background-color: red;
+}
+.time-slot.available {
+background-color: green;
+}
+.time-zone-selector {
+padding: 10px 20px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+</style>
+
+</head>
+<body>
+<div class="container">
+  <div class="profile-card">
+    <img src="path-to-employee-portrait.jpg" alt="Employee Portrait">
+    <h2>Employee Name</h2>
+    <p>Tel: 06 30 845 9932</p>
+    <p>Email: JaneDoe@emailDomain.hu</p>
+    <p>Website: www.webDomain.hu</p>
+  </div>
+  <div class="schedule">
+    <div class="schedule-header">
+      <span>March 6, Monday</span>
+      <div>
+        <button>&lt;</button>
+        <button>&gt;</button>
+      </div>
+    </div>
+    <!-- List the time slots. Adjust the class based on availability -->
+    <div class="time-slot available">11:20</div>
+    <div class="time-slot available">12:20</div>
+    <div class="time-slot available">13:40</div>
+    <div class="time-slot unavailable">15:50</div>
+    <div class="time-slot available">16:30</div>
+    <!-- Add more time slots as needed -->
+    <div class="time-zone-selector">
+      <span>Time Zone:</span>
+      <select>
+        <option value="gmt">GMT</option>
+         <!-- Add more options for other time zones -->
+    <option value="est">EST</option>
+    <option value="pst">PST</option>
+    <!-- etc. -->
+  </select>
+</div>
+  </div>
+</div>
+</body>
+</html>

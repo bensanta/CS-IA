@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List of Bookings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #f0f0f0;
+        }
+        .header .logo {
+            font-size: 24px;
+        }
+        .welcome {
+            font-size: 20px;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #ddd;
+        }
+        .booking-btn {
+            display: block;
+            margin: 20px 0;
+            text-align: center;
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="logo">Logo</div>
+    <div class="welcome">Welcome <span id="userFirstName">{{ first_name }}</span></div>
+
+</div>
+
+<h2>List of Bookings</h2>
+
+{#<section>#}
+{#    <h3>Current Bookings:</h3>#}
+{#    <table>#}
+{#        <tr>#}
+{#            <th>Change?</th>#}
+{#            <th>Booking ID</th>#}
+{#            <th>Date</th>#}
+{#            <th>Time (CEST)</th>#}
+{#            <th>Employee conducting the appointment</th>#}
+{#            <th>Duration of Session</th>#}
+{#            <th>Type of Appointment</th>#}
+{#        </tr>#}
+{#        <tr>#}
+{#            <td colspan="7">Nothing to show</td>#}
+{#        </tr>#}
+{#    </table>#}
+{#    <a href="/new-appointment" class="booking-btn">Book a New Appointment</a>#}
+{#</section>#}
+
+<section>
+  <h3>Current Bookings:</h3>
+  <table>
+    <tr>
+      <th>Booking ID</th>
+      <th>Username</th>
+      <th>Day</th>
+      <th>Month</th>
+      <th>Year</th>
+      <th>Type</th>
+      <th>Phone</th>
+    </tr>
+    {% if bookings %}
+      {% for booking in bookings %}
+        <tr>
+          <td>{{ booking.id }}</td>
+          <td>{{ booking.username }}</td>
+          <td>{{ booking.day }}</td>
+          <td>{{ booking.month }}</td>
+          <td>{{ booking.year }}</td>
+          <td>{{ booking.type }}</td>
+          <td>{{ booking.phone }}</td>
+        </tr>
+      {% endfor %}
+    {% else %}
+      <tr>
+        <td colspan="7">Nothing to show</td>
+      </tr>
+    {% endif %}
+  </table>
+  <a href="{{ url_for('newBooking') }}" class="booking-btn">Book a New Appointment</a>
+</section>
+
+
+{#<section>#}
+{#    <h3>Past Bookings:</h3>#}
+{#    <table>#}
+{#        <tr>#}
+{#            <th>Status</th>#}
+{#            <th>Booking ID</th>#}
+{#            <th>Date</th>#}
+{#            <th>Time (CEST)</th>#}
+{#            <th>Employee conducting the appointment</th>#}
+{#            <th>Duration of Session</th>#}
+{#            <th>Type of Appointment</th>#}
+{#        </tr>#}
+{#        <tr>#}
+{#            <td colspan="7">Nothing to show</td>#}
+{#        </tr>#}
+{#    </table>#}
+{#</section>#}
+
+<script>
+    // This script is for demonstration.
+    // You would replace this with a script that pulls the first name from your database.
+    document.getElementById('userFirstName').textContent = 'John';
+</script>
+
+</body>
+</html>

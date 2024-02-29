@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magnolia Saloon</title>
+<style>
+  body { font-family: Arial, sans-serif; }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f0f0f0;
+  }
+  .logo { font-size: 24px; }
+  .navigation a {
+    text-decoration: none;
+    margin: 0 10px;
+    color: #000;
+  }
+  .main-content {
+    text-align: center;
+    margin-top: 50px;
+  }
+  .auth-buttons {
+    margin: 20px;
+  }
+  button {
+    padding: 10px;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  .sign-up-btn { background-color: #007bff; color: white; }
+  .sign-up-btn a { background-color: #007bff; color: white; text-decoration: none !important; }
+  .log-in-btn { background-color: #6c757d; color: white; }
+  .log-in-btn a { background-color: #6c757d; color: white; text-decoration: none !important; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="logo">Logo</div>
+  <div class="navigation">
+    <a href="/contact">Contact</a> |
+    <a href="/signup">Sign up</a> |
+    <a href="/login">Log In</a>
+  </div>
+</div>
+
+<div class="main-content">
+  <h2>Please login or signup to use this platform</h2>
+  <div class="auth-buttons">
+    <button class="sign-up-btn"><a href="{{ url_for('signup') }}">Sign up</a></button>
+    <button class="log-in-btn"><a href="{{ url_for('login') }}">Log in</a></button>
+  </div>
+</div>
+</body>
+</html>

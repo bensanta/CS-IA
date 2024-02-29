@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>List of Bookings</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f0f0;
+  }
+  .header {
+    background: #e0e0e0;
+    padding: 10px;
+    text-align: center;
+  }
+  .welcome-message {
+    text-align: right;
+    padding: 10px;
+    background: #e0e0e0;
+  }
+  table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: left;
+  }
+  th {
+    background-color: #ddd;
+  }
+  .booking-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 10px 0;
+  }
+  .status-cancelled {
+    color: red;
+  }
+  .status-complete {
+    color: green;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  Logo
+</div>
+<div class="welcome-message">
+Welcome <First Name>
+
+</div>
+<h2>List of Bookings</h2>
+<section>
+  <h3>Current Bookings:</h3>
+  <table>
+    <tr>
+      <th>Change?</th>
+      <th>Booking ID</th>
+      <th>Date</th>
+      <th>Time (CEST)</th>
+      <th>Employee conducting the appointment</th>
+      <th>Duration of Session</th>
+      <th>Type of Appointment</th>
+    </tr>
+    <tr>
+      <td><a href="#">Change?</a></td>
+      <td>HD9S7D</td>
+      <td>05/17</td>
+      <td>15:30</td>
+      <td>John Smith</td>
+      <td>45m</td>
+      <td>Manicure</td>
+    </tr>
+    <tr>
+      <td><a href="#">Change?</a></td>
+      <td>OK3D2C</td>
+      <td>05/28</td>
+      <td>19:00</td>
+      <td>Jade Keen</td>
+      <td>1h30m</td>
+      <td>Pedicure + Manicure</td>
+    </tr>
+  </table>
+  <a href="#" class="booking-button">Book a New Appointment</a>
+</section>
+<section>
+  <h3>Past Bookings:</h3>
+  <table>
+    <tr>
+      <th>Status</th>
+      <th>Booking ID</th>
+      <th>Date</th>
+      <th>Time (CEST)</th>
+      <th>Employee conducting the appointment</th>
+      <th>Duration of Session</th>
+      <th>Type of Appointment</th>
+    </tr>
+    <tr>
+      <td class="status-cancelled">Cancelled</td>
+      <td>AB538K</td>
+      <td>05/17</td>
+      <td>15:30</td>
+      <td>John Smith</td>
+        <td>45m</td>
+  <td>Manicure</td>
+</tr>
+<tr>
+  <td class="status-complete">Complete</td>
+  <td>383JUX</td>
+  <td>05/28</td>
+  <td>19:00</td>
+  <td>Jade Keen</td>
+  <td>1h30m</td>
+  <td>Pedicure + Manicure</td>
+</tr>
+</table>
+</section>
+</body>
+</html>
+

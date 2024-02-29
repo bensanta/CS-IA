@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magnolia Saloon</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  .header {
+    background-color: #ADD8E6;
+    padding: 10px;
+    text-align: center;
+  }
+  .navigation {
+    background-color: #87CEEB;
+    padding: 10px;
+    text-align: center;
+  }
+  .navigation a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+  }
+  .about {
+    background-color: #f0f0f0;
+    margin: 20px auto;
+    width: 80%;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .portrait {
+    width: 150px;
+    height: 150px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    margin: 20px auto;
+    display: block;
+    background-image: url('/imgs/ownerPortrait.png'); /* The path to your image */
+    background-size: cover; /* Ensures the image covers the circle */
+    background-position: center; /* Centers the image in the circle */
+  }
+  .contact {
+    background-color: #ADD8E6;
+    padding: 10px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>Logo</div>
+</div>
+
+<div class="navigation">
+  <a href="/signup">Sign up</a>
+  <a href="/login">Log In</a>
+</div>
+
+<div class="about">
+  <h2>About Magnolia Saloon</h2>
+  <div class="portrait" style="background-image: url({{ url_for('static', filename='imgs/ownerPortrait.png') }});"></div>
+  <p>Hi, I'm Adrienn Sánta, founder of Magnolia Saloon. My passion for holistic wellness was born from a personal health journey, leading me to become a certified aromatherapist and massage therapist. At Magnolia Saloon, I specialize in ZYTO biocommunication scanning and carefully selected DoTerra essential oils, ensuring a unique, personalized wellness experience for each client.</p>
+  <p>My approach combines the healing power of touch with the therapeutic benefits of nature's remedies. I've created not just a place for treatments, but a sanctuary for mind, body, and spirit. At Magnolia Saloon, every visit is an opportunity for transformation and rejuvenation. Join me in this journey towards holistic well-being.</p>
+</div>
+
+<div class="contact">
+  <div>Adrienn Sánta</div>
+  <div>+36709927771</div>
+  <div>asanta@gmail.com</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magnolia Saloon Appointment Booking</title>
+<style>
+  /* Add all your previous styles here */
+
+  /* You might need additional styles to align the timezone above the calendar */
+  .timezone-select {
+    margin-bottom: 20px; /* Adjust as needed */
+  }
+
+  /* Ensure the calendar and form elements are properly aligned */
+  .calendar, .form-section {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  /* Add more styles as needed */
+</style>
+</head>
+<body>
+
+<header>
+  <img src="path-to-your-logo.png" alt="Logo" style="vertical-align: middle;">
+  <span>Contact | Sign up | Log In</span>
+</header>
+
+<div class="container">
+  <!-- Employee Card Section -->
+  <div class="employee-card">
+<h2>Employee Name</h2>
+<p>Tel: 06 30 845 9932</p>
+<p>Email: JaneDoe@emailDomain.hu</p>
+<p>Website: www.webDomain.hu</p>
+
+  </div>
+  <!-- Appointment Calendar Section -->
+  <div class="appointment-calendar">
+    <form action="/submit-appointment" method="post">
+      <div class="form-section">
+        <label for="appointment-type">Appointment Type:</label>
+        <select id="appointment-type" name="appointment-type">
+          <option value="type1">Type 1</option>
+          <option value="type2">Type 2</option>
+          <!-- More options here -->
+        </select>
+              <label for="appointment-length">Length:</label>
+    <select id="appointment-length" name="appointment-length">
+      <option value="30">30 Minutes</option>
+      <option value="60">1 Hour</option>
+      <!-- More options here -->
+    </select>
+
+    <div class="timezone-select">
+      <label for="timezone">Time Zone:</label>
+      <select id="timezone" name="timezone">
+        <option value="gmt">GMT</option>
+        <!-- More time zones here -->
+      </select>
+    </div>
+  </div>
+
+  <div class="calendar">
+    <div class="month">
+      <span class="month-title">March 2023</span>
+    </div>
+    <table>
+      <!-- Calendar table as before -->
+      <!-- The rest of the calendar structure remains unchanged -->
+        <thead>
+      <tr>
+        <th>MON</th>
+        <th>TUE</th>
+        <th>WED</th>
+        <th>THU</th>
+        <th>FRI</th>
+        <th>SAT</th>
+        <th>SUN</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td></td> <!-- Last month's date -->
+        <td></td> <!-- Last month's date -->
+        <td><button type="button" class="date-button">1</button></td>
+        <td><button type="button" class="date-button">2</button></td>
+        <td><button type="button" class="date-button">3</button></td>
+        <td><button type="button" class="date-button">4</button></td>
+        <td><button type="button" class="date-button">5</button></td>
+      </tr>
+      <tr>
+        <td><button type="button" class="date-button">6</button></td>
+        <td><button type="button" class="date-button">7</button></td>
+        <td><button type="button" class="date-button">8</button></td>
+       <td><button type="button" class="date-button">9</button></td>
+        <td><button type="button" class="date-button">10</button></td>
+        <td><button type="button" class="date-button">11</button></td>
+        <td><button type="button" class="date-button">12</button></td>
+      </tr>
+      <tr>
+        <td><button type="button" class="date-button">13</button></td>
+        <td><button type="button" class="date-button">14</button></td>
+        <td><button type="button" class="date-button">15</button></td>
+        <td><button type="button" class="date-button">16</button></td>
+        <td><button type="button" class="date-button">17</button></td>
+        <td><button type="button" class="date-button">18</button></td>
+        <td><button type="button" class="date-button">19</button></td>
+      </tr>
+      <tr>
+        <td><button type="button" class="date-button">20</button></td>
+        <td><button type="button" class="date-button">21</button></td>
+        <td><button type="button" class="date-button">22</button></td>
+        <td><button type="button" class="date-button">23</button></td>
+        <td><button type="button" class="date-button">24</button></td>
+        <td><button type="button" class="date-button">25</button></td>
+        <td><button type="button" class="date-button">26</button></td>
+      </tr>
+      <tr>
+        <td><button type="button" class="date-button">27</button></td>
+        <td><button type="button" class="date-button">28</button></td>
+        <td><button type="button" class="date-button">29</button></td>
+        <td><button type="button" class="date-button">30</button></td>
+        <td><button type="button" class="date-button">31</button></td>
+        <td></td> <!-- Next month's date -->
+        <td></td> <!-- Next month's date -->
+      </tr>
+    </tbody>
+    </table>
+  </div>
+
+  <input type="submit" value="Book Appointment" class="book-appointment">
+</form>
+</div>
+</div>
+<script>
+  // Include any JavaScript here if necessary
+</script>
+</body>
+</html>
