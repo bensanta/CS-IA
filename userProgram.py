@@ -169,6 +169,9 @@ def bookingsList():
 def signup():
     return render_template('signUpPage.html')
 
+@app.route('/adminPanel')
+def adminPanel():
+    return render_template('userAndBookingListChoicePage.html')
 
 @app.route('/')
 def index():

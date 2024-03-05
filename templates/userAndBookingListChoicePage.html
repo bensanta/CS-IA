@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magnolia Saloon</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  .header, .nav, .main-content {
+    background-color: #ffffff;
+    margin: 10px;
+    padding: 20px;
+    width: 80%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  .nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #0000ff;
+  }
+  .button {
+    background-color: #0000ff;
+    color: #ffffff;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+  }
+  .button:hover {
+    background-color: #0000dd;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Logo</h1>
+</div>
+
+<div class="nav">
+  <a href="{{ url_for('index') }}">Contact</a> |
+  <a href="{{ url_for('signup') }}">Sign up</a> |
+  <a href="{{ url_for('login') }}">Log In</a>
+</div>
+
+<div class="main-content">
+  <h2>Which portal would you like to access?</h2>
+  <button class="button"><a href="{{ url_for('user') }}" class="button">User List</a></button>
+  <button class="button"><a href="{{ url_for('bookingsList') }}" class="button">Bookings List</a></button>
+</div>
+
+</body>
+</html>
